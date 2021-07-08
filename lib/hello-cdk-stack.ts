@@ -7,7 +7,8 @@ export class HelloCdkStack extends cdk.Stack {
 
     // The code that defines your stack goes here
     const myBucket01 = new s3.Bucket(this, 'myBucket', {
-      bucketName: "smcmahon-my-cdk-bucket01"
+      bucketName: "smcmahon-my-cdk-bucket01",
+      versioned: true
     });
   }
 }
