@@ -1,0 +1,14 @@
+#!/bin/bash
+
+MY_REGION=$1
+
+if [[ ! $MY_REGION ]]
+then
+    echo "set_cdk_env.sh YOUR_REGION_HERE"
+    exit 1
+fi
+
+CDK_DEFAULT_ACCOUNT="126069660576"
+export CDK_DEFAULT_ACCOUNT
+CDK_DEFAULT_REGION=$MY_REGION
+export CDK_DEFAULT_REGION
